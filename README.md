@@ -9,6 +9,10 @@ TARGET_SLACK_API=XXXX
 
 # How to debug on develop enviroment
 `docker-compose up`
+go into node container and exec `yarn install`
+
+`dokcer-compose restart`
+
 access your `localhost:8080`
 
 You can get issues which has `YYYY/MM/DD` format in the title and the date is before today.
