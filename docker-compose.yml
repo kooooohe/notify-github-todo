@@ -1,0 +1,13 @@
+version: "3"
+services:
+  node:
+    image: node:13
+    volumes:
+      - ./app:/app:cached
+    working_dir: /app
+    env_file:
+      - .env
+    tty: true
+    ports: 
+      - 8080:8080
+    command: ["node", "index.js"]

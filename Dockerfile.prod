@@ -1,0 +1,15 @@
+FROM node:13
+
+WORKDIR /app
+
+COPY ./app/package*.json ./
+COPY ./app/yarn.lock ./
+
+# Install production dependencies.
+RUN yarn install --production
+
+# Copy local code to the container image.
+COPY ./app/index.js ./
+
+# Run the web service on container startup.
+CMD [ "node", "index.js" ]
