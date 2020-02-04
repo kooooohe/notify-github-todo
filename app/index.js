@@ -27,9 +27,12 @@ const user_slack_id_list = {
 }
 
 const options = {
-  uri: `${process.env.GITHUB_API}?access_token=${process.env.GITHUB_TOKEN}&state=open`,
+  uri: `${process.env.GITHUB_API}?state=open`,
   method: 'GET',
-  headers: { 'user-agent': 'node.js' },
+  headers: { 
+    'user-agent': 'node.js',
+    Authorization: `token ${process.env.GITHUB_TOKEN}`
+  },
   json: true,
 };
 
