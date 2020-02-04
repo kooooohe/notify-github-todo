@@ -9,9 +9,7 @@ TARGET_SLACK_API=XXXX
 
 # How to debug on develop enviroment
 `docker-compose up`
-go into node container and exec `yarn install`
-
-`dokcer-compose restart`
+go into node container and exec `yarn install && node index.js`
 
 access your `localhost:8080`
 
